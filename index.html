@@ -1,73 +1,392 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人信息页面</title>
+    <title>山西大学 计算智能与中文信息实验室</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
         }
+
         .container {
-            max-width: 800px;
+            width: 80%;
             margin: auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            overflow: hidden;
         }
-        .photo {
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header .highlight,
+        header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .profile {
             text-align: center;
-            margin-bottom: 20px;
+            padding: 50px;
+            background: #fff;
+            margin-top: 20px;
         }
-        .photo img {
-            max-width: 150px;
-            border-radius: 50%;
-        }
-        h2 {
+
+        .profile h2 {
             color: #333;
         }
-        .section {
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .profile p {
+            color: #666;
+        }
+
+        .references {
+            margin-top: 20px;
+        }
+
+        .references {
+            margin-top: 20px;
+        }
+
+        .references h2 {
             margin-bottom: 20px;
+        }
+
+        .references ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .references li {
+            margin-bottom: 10px;
+        }
+
+        .references li::before {
+            display: inline;
+        }
+
+        .references li::after {
+
+            display: inline;
+        }
+
+        .references img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .student-info {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            /* 修改为靠左对齐 */
+            align-items: center;
+        }
+
+        .student-info li {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            margin-right: auto;
+            /* 当只有一个元素时靠右显示 */
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 控制每行显示的个数 */
+        @media (min-width: 1200px) {
+            .student-info li {
+                flex-basis: calc(25% - 20px);
+                /* 每行显示4个 */
+            }
+        }
+
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="photo">
-            <img src="你的照片链接" alt="个人照片">
-        </div>
-        <div class="section">
-            <h2>个人信息</h2>
-            <p>姓名: 张三</p>
-            <p>出生日期: 1990年1月1日</p>
-            <p>联系方式: zhangsan@example.com</p>
-        </div>
-        <div class="section">
-            <h2>硕士情况</h2>
-            <p>学校: 北京大学</p>
-            <p>专业: 计算机科学</p>
-            <p>毕业年份: 2015年</p>
-            <p>硕士论文: <a href="硕士论文链接">《基于机器学习的图像识别研究》</a></p>
-        </div>
-        <div class="section">
-            <h2>博士情况</h2>
-            <p>学校: 清华大学</p>
-            <p>专业: 人工智能</p>
-            <p>毕业年份: 2020年</p>
-            <p>博士论文: <a href="博士论文链接">《深度学习在自然语言处理中的应用》</a></p>
-        </div>
-        <div class="section">
-            <h2>研究成果</h2>
-            <ul>
-                <li>论文1: <a href="论文1链接">《深度学习在图像处理中的应用》</a></li>
-                <li>论文2: <a href="论文2链接">《自然语言处理中的新方法》</a></li>
-                <li>项目1: <a href="项目1链接">《智能语音助手开发》</a></li>
-                <li>项目2: <a href="项目2链接">《自动驾驶系统研究》</a></li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
 
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">山西大学</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#">课题组介绍</a></li>
+                    <li><a href="#">企业科技信息服务系统</a></li>
+                    <li><a href="#">课题组成果展示</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <div style="display: flex; align-items: flex-start; margin-top: 10px;">
+                <img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\头像.png" alt="个人头像"
+                    style="margin-right: 20px; width: 150px; height: auto;">
+                <div>
+                    <h2><strong>课题组负责人：</strong>王智强</h2>
+                    <p><strong>职称：</strong>副教授</p>
+                    <p><strong>研究方向：</strong>数据挖掘与机器学习、社交网络分析、自然语言处理</p>
+                    <p><strong>负责人简介：</strong>王智强，山西大学智能信息处理研究所副教授，博士生导师，主要研究方向包括：数据挖掘与机器学习、网络大数据分析、自然语言处理。2018年在山西大学计算机与信息技术学院获得博士学位。近年来，主持国家自然科学基金面上、青年等项目，并作为骨干成员参与科技创新2030—“新一代人工智能”重大项目、国家自然科学基金联合基金重点项目、山西省重点研发计划项目等国家级与省部级项目多项。在IEEE
+                        TKDE、ACL、WSDM、《中国科学：信息科学》、《计算机学报》等国内外重要学术期刊及会议发表学术论文20余篇。获得了2023年度山西省自然科学一等奖、2019年度中国中文信息学会优秀博士学位论文奖、山西省优秀博士学位论文奖。中国计算机学会人工智能与模式识别专委会执行委员、中国中文信息学会信息检索专委会委员、中国中文信息学会青年工作委员会委员。ACL、KDD、CCDM、EMNLP、COLING等国际学术会议和TNNLS、Neural
+                        Networks、Neurocomputing等国际期刊审稿人。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section class="references">
+            <h2>学术研究</h2>
+            <ul>
+                <li>[1] Yunxiao Zhao, Zhiqiang Wang*, Xiaoli Li, Jiye Liang, Ru Li*. Reinforced Causal Agent-Guided
+                    Self-explaining Rationalization[C]. The 62nd Annual Meeting of the Association for Computational
+                    Linguistics (ACL), 2024: 510-518</li>
+                <li>[2] Ru Li, Yunxiao Zhao, Zhiqiang Wang*, Xuefeng Su, Shaoru Guo, Yong Guan, Xiaoqi Han, Hongyan
+                    Zhao. A Comprehensive Overview of CFN From a Commonsense Perspective[J]. Machine Intelligence
+                    Research, 2024, 21(2): 239-256</li>
+                <li>[3] Liangliang Wen, Jiye Liang*, Kaixuan Yao and Zhiqiang Wang. Black-Box Adversarial Attack on
+                    Graph Neural Networks With Node Voting Mechanism[J]. IEEE Transactions on Knowledge and Data
+                    Engineering, 2024, DOI: 10.1109/TKDE.2024.3380750</li>
+                <li>[4] Zhihao Guo, Feng Wang*, Kaixuan Yao, Jiye Liang and Zhiqiang Wang. Multi-scale variational graph
+                    autoencoder for link prediction[C]. The 15th ACM International Conference on Web Search and Data
+                    Mining (WSDM), 2022: 334-342</li>
+                <li>[5] Zhiqiang Wang, Jiye Liang, Ru Li, Yuhua Qian. An approach to cold-start link prediction:
+                    Establishing connections between non-topological and topological information[J]. IEEE Transactions
+                    on Knowledge and Data Engineering, 2016, 28(11): 2857-2870</li>
+                <li>[6] Ru Li*, Juan Wu, Zhiqiang Wang, Qinghua Chai. Implicit role linking on chinese discourse:
+                    Exploiting explicit roles and frame-to-frame relations[C]. Proceedings of the 53rd Annual Meeting of
+                    the Association for Computational Linguistics (ACL), 2015: 1263-1271</li>
+                <li>[7] Kaihan Zhang, Zhiqiang Wang*, Jiye Liang, Xingwang Zhao. A bayesian matrix factorization model
+                    for dynamic user embedding in recommender system[J]. Frontiers of Computer Science, 2022, 16(5):
+                    165346</li>
+                <li>[8] Zhiqiang Wang, Jiye Liang*, Ru Li. A fusion probability matrix factorization framework for link
+                    prediction, Knowledge-Based Systems[J]. 2018, 159: 72-85</li>
+                <li>[9] Zhiqiang Wang, Jiye Liang*, Ru Li. Exploiting user-to-user topic inclusion degree for link
+                    prediction in social-information networks[J]. Expert Systems with Applications, 2018, 108: 143-158
+                </li>
+                <li>[10] 王智强, 梁吉业*, 李茹, 基于信息融合的概率矩阵分解链路预测方法[J]. 计算机研究与发展, 2019, 56(2): 306-318</li>
+                <li>[11] 王智强, 李茹*, 梁吉业, 张旭华, 武娟, 苏娜, 基于汉语篇章框架语义分析的阅读理解问答研究[J]. 计算机学报, 2016, 39(4): 795-807</li>
+            </ul>
+        </section>
+    </div>
+    <div class="container">
+        <section class="references">
+            <h2>科研项目</h2>
+            <ul>
+                <li>(1) 国家自然科学基金委员会, 面上项目, 62272285, 动态网络表示学习与建模方法研究, 2023-01-01 至 2026-12-31, 主持</li>
+                <li>(2) 国家自然科学基金委员会, 青年科学基金项目, 61906111, 社交网络的可解释性链接预测模型与方法研究, 2020-01-01 至 2022-12-31, 主持</li>
+                <li>(3) 国家科技部, 科技创新2030-“新一代人工智能”重大项目, 2020AAA0106100, 认知计算基础理论与方法研究, 2020-11 至 2024-10, 参与</li>
+                <li>(4) 国家自然科学基金委员会, 联合基金项目, U21A20473, 网络大数据分析挖掘的理论与方法, 2022-01-01 至 2025-12-31, 参与</li>
+                <li>(5) 山西省科技厅, 山西省重点研发计划项目, 201903D121162, 基于多源异构大数据的科技服务推荐平台, 2019-12 至 2021-12, 参与</li>
+                <li>(6) 国家自然科学基金委员会, 面上项目, 62072293, 可解释性多视图聚类方法研究, 2021-01-01 至 2024-12-31, 参与</li>
+                <li>(7) 国家自然科学基金委员会, 青年科学基金项目, 61807022, 函数型数据的特征重建与分类算法研究, 2019-01-01 至 2021-12-31, 参与</li>
+                <li>(8) 国家自然科学基金委员会, 青年科学基金项目, 61806117, 基于事件的图文数据阅读理解关键技术研究, 2019-01-01 至 2021-12-31, 参与</li>
+                <li>(9) 国家自然科学基金委员会, 面上项目, 61876103, 基于多粒度的半监督学习方法, 2019-01-01 至 2022-12-31, 参与</li>
+                <li>(10) 国家自然科学基金委员会, 面上项目, 61772323, 面向高维数据的粒计算理论与方法, 2018-01-01 至 2021-12-31, 参与</li>
+                <li>(11) 国家自然科学基金委员会, 面上项目, 61772324, 面向汉语篇章语义分析的框架推理技术研究, 2018-01-01 至 2021-12-31, 参与</li>
+                <li>(12) 国家自然科学基金委员会, 青年科学基金项目, 61602288, 基于稀疏理论和相关滤波的鲁棒目标检测和跟踪算法及应用研究, 2017-01-01 至 2019-12-31, 参与</li>
+                <li>(13) 山西省教育厅，山西省高等学校科技创新项目, 2019L0023, 多粒度视角下的可解释性推荐方法研究, 2020-01-01 至 2021-12-31, 主持</li>
+            </ul>
+        </section>
+    </div>
+    <div class="container">
+        <section class="references">
+            <h2>发明专利</h2>
+            <ul>
+                <li>[1] 王智强, 梁吉业, 梁建青. 一种基于概率产生式的社交网络时序链接预测方法及装置, 中国, ZL202010102869.2</li>
+                <li>[2] 梁吉业, 李琦, 王智强. 一种基于PU学习和随机游走的链接预测方法及装置, 中国, ZL202010087931.5</li>
+                <li>[3] 梁吉业, 张凯涵, 王智强. 一种基于图神经网络的序列推荐系统及推荐方法, 中国, ZL202011549710.1</li>
+                <li>[4] 梁吉业, 李琳, 王智强, 梁建青. 一种基于矩阵分解的事后可解释性推荐方法及装置, 中国, ZL202010034176.4</li>
+                <li>[5] 梁吉业, 刘雨璐, 王智强, 张凯涵. 基于用户兴趣漂移的推荐方法及推荐装置, 中国, ZL202010076472.0</li>
+            </ul>
+        </section>
+    </div>
+    <div class="container">
+        <section class="references">
+            <h2>学术获奖</h2>
+            <ul>
+                <li>(1) 王智强(3/4); 图数据分析挖掘基础理论与方法, 山西省科学技术奖励委员会, 山西省自然科学一等奖, 2023</li>
+                <li>(2) 王智强(2/2); 图结构驱动的企业科技信息服务, “华为杯”第五届中国研究生人工智能创新大赛一等奖, 中国学位与研究生教育学会, 优秀指导教师, 2023</li>
+                <li>(3) 王智强(1/1); 社交网络链接预测方法研究, 中国中文信息学会, 中国中文信息学会优秀博士学位论文奖, 2019</li>
+                <li>(4) 王智强(1/1); 社交网络链接预测方法研究, 山西省人民政府学位委员会, 山西省优秀博士论文奖, 2019</li>
+                <li>(5) 王智强(1/1); 社交网络链接预测方法研究, ACM中国, ACM太原优秀博士学位论文奖, 2018</li>
+            </ul>
+        </section>
+    </div>
+    <div class="container">
+        <section class="references">
+            <h2>课题组-在读博士生</h2>
+            <ul class="student-info">
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：张三</p>
+                        <p>年龄：20</p>
+                        <p>年级：博一</p>
+                        <p>联系方式：xxxxxx</p>
+                        <p>研究方向：xxxxxxxxxxx</p>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+    <div class="container">
+        <section class="references">
+            <h2>课题组-在读硕士生</h2>
+            <ul class="student-info">
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：胡白靖</p>
+                        <p>年龄：25</p>
+                        <p>年级：研三</p>
+                        <p>联系方式：18703486943</p>
+                        <p>研究方向：图表示学习、机器学习</p>
+                    </div>
+                </li>
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：张嘉嵘</p>
+                        <p>年龄：20</p>
+                        <p>年级：研三</p>
+                        <p>联系方式：xxxxxx</p>
+                        <p>研究方向：xxxxxxxxxxx</p>
+                    </div>
+                </li>
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：潘佳怡</p>
+                        <p>年龄：20</p>
+                        <p>年级：研三</p>
+                        <p>联系方式：xxxxxx</p>
+                        <p>研究方向：xxxxxxxxxxx</p>
+                    </div>
+                </li>
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：温江浩</p>
+                        <p>年龄：20</p>
+                        <p>年级：研二</p>
+                        <p>联系方式：xxxxxx</p>
+                        <p>研究方向：xxxxxxxxxxx</p>
+                    </div>
+                </li>
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：张佳鑫</p>
+                        <p>年龄：20</p>
+                        <p>年级：研二</p>
+                        <p>联系方式：xxxxxx</p>
+                        <p>研究方向：xxxxxxxxxxx</p>
+                    </div>
+                </li>
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：程诗颖</p>
+                        <p>年级：研二</p>
+                        <p>联系方式：xxxxxx</p>
+                        <p>研究方向：xxxxxxxxxxx</p>
+                    </div>
+                </li>
+                <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                    <div class="info">
+                        <p>姓名：张晨超</p>
+                        <p>年龄：20</p>
+                        <p>年级：研一</p>
+                        <p>联系方式：xxxxxx</p>
+                        <p>研究方向：xxxxxxxxxxx</p>
+                    </div>
+                </li>
+
+            </ul>
+
+
+
+
+        </section>
+    </div>
+
+
+    <footer>
+        <p>&copy; 山西大学 计算智能与中文信息处理教育部重点实验室 王智强 课题组</p>
+    </footer>
+</body>
+
+</html>
