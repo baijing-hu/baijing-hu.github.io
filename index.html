@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>山西大学 计算智能与中文信息实验室</title>
+    <link rel="shortcut icon" href="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\logo.png" type="image/png">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -103,11 +104,13 @@
 
         .references ul {
             list-style-type: none;
+            font-family: 'Times New Roman';
             padding: 0;
         }
 
         .references li {
             margin-bottom: 10px;
+            font-size: 18px;
         }
 
         .references li::before {
@@ -159,12 +162,58 @@
             flex-direction: column;
         }
 
+
+
+
+
         /* 控制每行显示的个数 */
         @media (min-width: 1200px) {
             .student-info li {
                 flex-basis: calc(25% - 20px);
                 /* 每行显示4个 */
             }
+        }
+
+
+        .profile-container {
+            background: #fff;
+            padding: 20px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .profile-header strong {
+            color: #0056b3;
+        }
+
+        .profile-section p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .profile-section strong {
+            color: #666;
+        }
+
+        .profile-image {
+            margin-right: 20px;
+            width: 150px;
+            height: auto;
+            float: left;
+            margin-bottom: 20px;
+            /* Ensure there's space below the image */
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
 
 
@@ -197,196 +246,209 @@
     </header>
 
     <div class="container">
-        <section>
-            <div style="display: flex; align-items: flex-start; margin-top: 10px;">
-                <img src="./头像.png" alt="个人头像"
-                    style="margin-right: 20px; width: 150px; height: auto;">
-                <div>
+        <div class="profile-container clearfix" style="background: linear-gradient(to left, #d3ddf0, #f7f7f6);">
+            <figure class="profile-image">
+                <img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\头像.png" alt="个人头像">
+            </figure>
+            <div class="profile-section">
+                <div class="profile-header">
                     <h2><strong>课题组负责人：</strong>王智强</h2>
-                    <p><strong>职称：</strong>副教授</p>
-                    <p><strong>研究方向：</strong>数据挖掘与机器学习、社交网络分析、自然语言处理</p>
-                    <p><strong>负责人简介：</strong>王智强，山西大学智能信息处理研究所副教授，博士生导师，主要研究方向包括：数据挖掘与机器学习、网络大数据分析、自然语言处理。2018年在山西大学计算机与信息技术学院获得博士学位。近年来，主持国家自然科学基金面上、青年等项目，并作为骨干成员参与科技创新2030—“新一代人工智能”重大项目、国家自然科学基金联合基金重点项目、山西省重点研发计划项目等国家级与省部级项目多项。在IEEE
-                        TKDE、ACL、WSDM、《中国科学：信息科学》、《计算机学报》等国内外重要学术期刊及会议发表学术论文20余篇。获得了2023年度山西省自然科学一等奖、2019年度中国中文信息学会优秀博士学位论文奖、山西省优秀博士学位论文奖。中国计算机学会人工智能与模式识别专委会执行委员、中国中文信息学会信息检索专委会委员、中国中文信息学会青年工作委员会委员。ACL、KDD、CCDM、EMNLP、COLING等国际学术会议和TNNLS、Neural
-                        Networks、Neurocomputing等国际期刊审稿人。</p>
                 </div>
+                <p><strong>职称：</strong>副教授</p>
+                <p><strong>研究方向：</strong>数据挖掘与机器学习、社交网络分析、自然语言处理</p>
+                <p><strong>负责人简介：</strong>王智强，山西大学智能信息处理研究所副教授，博士生导师，主要研究方向包括：数据挖掘与机器学习、网络大数据分析、自然语言处理。2018年在山西大学计算机与信息技术学院获得博士学位。近年来，主持国家自然科学基金面上、青年等项目，并作为骨干成员参与科技创新2030—“新一代人工智能”重大项目、国家自然科学基金联合基金重点项目、山西省重点研发计划项目等国家级与省部级项目多项。在IEEE
+                    TKDE、ACL、WSDM、《中国科学：信息科学》、《计算机学报》等国内外重要学术期刊及会议发表学术论文20余篇。获得了2023年度山西省自然科学一等奖、2019年度中国中文信息学会优秀博士学位论文奖、山西省优秀博士学位论文奖。中国计算机学会人工智能与模式识别专委会执行委员、中国中文信息学会信息检索专委会委员、中国中文信息学会青年工作委员会委员。ACL、KDD、CCDM、EMNLP、COLING等国际学术会议和TNNLS、Neural
+                    Networks、Neurocomputing等国际期刊审稿人。</p>
             </div>
-        </section>
-    </div>
-    <div class="container">
-        <section class="references">
-            <h2>学术研究</h2>
-            <ul>
-                <li>[1] Yunxiao Zhao, Zhiqiang Wang*, Xiaoli Li, Jiye Liang, Ru Li*. Reinforced Causal Agent-Guided
-                    Self-explaining Rationalization[C]. The 62nd Annual Meeting of the Association for Computational
-                    Linguistics (ACL), 2024: 510-518</li>
-                <li>[2] Ru Li, Yunxiao Zhao, Zhiqiang Wang*, Xuefeng Su, Shaoru Guo, Yong Guan, Xiaoqi Han, Hongyan
-                    Zhao. A Comprehensive Overview of CFN From a Commonsense Perspective[J]. Machine Intelligence
-                    Research, 2024, 21(2): 239-256</li>
-                <li>[3] Liangliang Wen, Jiye Liang*, Kaixuan Yao and Zhiqiang Wang. Black-Box Adversarial Attack on
-                    Graph Neural Networks With Node Voting Mechanism[J]. IEEE Transactions on Knowledge and Data
-                    Engineering, 2024, DOI: 10.1109/TKDE.2024.3380750</li>
-                <li>[4] Zhihao Guo, Feng Wang*, Kaixuan Yao, Jiye Liang and Zhiqiang Wang. Multi-scale variational graph
-                    autoencoder for link prediction[C]. The 15th ACM International Conference on Web Search and Data
-                    Mining (WSDM), 2022: 334-342</li>
-                <li>[5] Zhiqiang Wang, Jiye Liang, Ru Li, Yuhua Qian. An approach to cold-start link prediction:
-                    Establishing connections between non-topological and topological information[J]. IEEE Transactions
-                    on Knowledge and Data Engineering, 2016, 28(11): 2857-2870</li>
-                <li>[6] Ru Li*, Juan Wu, Zhiqiang Wang, Qinghua Chai. Implicit role linking on chinese discourse:
-                    Exploiting explicit roles and frame-to-frame relations[C]. Proceedings of the 53rd Annual Meeting of
-                    the Association for Computational Linguistics (ACL), 2015: 1263-1271</li>
-                <li>[7] Kaihan Zhang, Zhiqiang Wang*, Jiye Liang, Xingwang Zhao. A bayesian matrix factorization model
-                    for dynamic user embedding in recommender system[J]. Frontiers of Computer Science, 2022, 16(5):
-                    165346</li>
-                <li>[8] Zhiqiang Wang, Jiye Liang*, Ru Li. A fusion probability matrix factorization framework for link
-                    prediction, Knowledge-Based Systems[J]. 2018, 159: 72-85</li>
-                <li>[9] Zhiqiang Wang, Jiye Liang*, Ru Li. Exploiting user-to-user topic inclusion degree for link
-                    prediction in social-information networks[J]. Expert Systems with Applications, 2018, 108: 143-158
-                </li>
-                <li>[10] 王智强, 梁吉业*, 李茹, 基于信息融合的概率矩阵分解链路预测方法[J]. 计算机研究与发展, 2019, 56(2): 306-318</li>
-                <li>[11] 王智强, 李茹*, 梁吉业, 张旭华, 武娟, 苏娜, 基于汉语篇章框架语义分析的阅读理解问答研究[J]. 计算机学报, 2016, 39(4): 795-807</li>
-            </ul>
-        </section>
-    </div>
-    <div class="container">
-        <section class="references">
-            <h2>科研项目</h2>
-            <ul>
-                <li>(1) 国家自然科学基金委员会, 面上项目, 62272285, 动态网络表示学习与建模方法研究, 2023-01-01 至 2026-12-31, 主持</li>
-                <li>(2) 国家自然科学基金委员会, 青年科学基金项目, 61906111, 社交网络的可解释性链接预测模型与方法研究, 2020-01-01 至 2022-12-31, 主持</li>
-                <li>(3) 国家科技部, 科技创新2030-“新一代人工智能”重大项目, 2020AAA0106100, 认知计算基础理论与方法研究, 2020-11 至 2024-10, 参与</li>
-                <li>(4) 国家自然科学基金委员会, 联合基金项目, U21A20473, 网络大数据分析挖掘的理论与方法, 2022-01-01 至 2025-12-31, 参与</li>
-                <li>(5) 山西省科技厅, 山西省重点研发计划项目, 201903D121162, 基于多源异构大数据的科技服务推荐平台, 2019-12 至 2021-12, 参与</li>
-                <li>(6) 国家自然科学基金委员会, 面上项目, 62072293, 可解释性多视图聚类方法研究, 2021-01-01 至 2024-12-31, 参与</li>
-                <li>(7) 国家自然科学基金委员会, 青年科学基金项目, 61807022, 函数型数据的特征重建与分类算法研究, 2019-01-01 至 2021-12-31, 参与</li>
-                <li>(8) 国家自然科学基金委员会, 青年科学基金项目, 61806117, 基于事件的图文数据阅读理解关键技术研究, 2019-01-01 至 2021-12-31, 参与</li>
-                <li>(9) 国家自然科学基金委员会, 面上项目, 61876103, 基于多粒度的半监督学习方法, 2019-01-01 至 2022-12-31, 参与</li>
-                <li>(10) 国家自然科学基金委员会, 面上项目, 61772323, 面向高维数据的粒计算理论与方法, 2018-01-01 至 2021-12-31, 参与</li>
-                <li>(11) 国家自然科学基金委员会, 面上项目, 61772324, 面向汉语篇章语义分析的框架推理技术研究, 2018-01-01 至 2021-12-31, 参与</li>
-                <li>(12) 国家自然科学基金委员会, 青年科学基金项目, 61602288, 基于稀疏理论和相关滤波的鲁棒目标检测和跟踪算法及应用研究, 2017-01-01 至 2019-12-31, 参与</li>
-                <li>(13) 山西省教育厅，山西省高等学校科技创新项目, 2019L0023, 多粒度视角下的可解释性推荐方法研究, 2020-01-01 至 2021-12-31, 主持</li>
-            </ul>
-        </section>
-    </div>
-    <div class="container">
-        <section class="references">
-            <h2>发明专利</h2>
-            <ul>
-                <li>[1] 王智强, 梁吉业, 梁建青. 一种基于概率产生式的社交网络时序链接预测方法及装置, 中国, ZL202010102869.2</li>
-                <li>[2] 梁吉业, 李琦, 王智强. 一种基于PU学习和随机游走的链接预测方法及装置, 中国, ZL202010087931.5</li>
-                <li>[3] 梁吉业, 张凯涵, 王智强. 一种基于图神经网络的序列推荐系统及推荐方法, 中国, ZL202011549710.1</li>
-                <li>[4] 梁吉业, 李琳, 王智强, 梁建青. 一种基于矩阵分解的事后可解释性推荐方法及装置, 中国, ZL202010034176.4</li>
-                <li>[5] 梁吉业, 刘雨璐, 王智强, 张凯涵. 基于用户兴趣漂移的推荐方法及推荐装置, 中国, ZL202010076472.0</li>
-            </ul>
-        </section>
-    </div>
-    <div class="container">
-        <section class="references">
-            <h2>学术获奖</h2>
-            <ul>
-                <li>(1) 王智强(3/4); 图数据分析挖掘基础理论与方法, 山西省科学技术奖励委员会, 山西省自然科学一等奖, 2023</li>
-                <li>(2) 王智强(2/2); 图结构驱动的企业科技信息服务, “华为杯”第五届中国研究生人工智能创新大赛一等奖, 中国学位与研究生教育学会, 优秀指导教师, 2023</li>
-                <li>(3) 王智强(1/1); 社交网络链接预测方法研究, 中国中文信息学会, 中国中文信息学会优秀博士学位论文奖, 2019</li>
-                <li>(4) 王智强(1/1); 社交网络链接预测方法研究, 山西省人民政府学位委员会, 山西省优秀博士论文奖, 2019</li>
-                <li>(5) 王智强(1/1); 社交网络链接预测方法研究, ACM中国, ACM太原优秀博士学位论文奖, 2018</li>
-            </ul>
-        </section>
-    </div>
-    <div class="container">
-        <section class="references">
-            <h2>课题组-在读博士生</h2>
-            <ul class="student-info">
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：张三</p>
-                        <p>年龄：20</p>
-                        <p>年级：博一</p>
-                        <p>联系方式：xxxxxx</p>
-                        <p>研究方向：xxxxxxxxxxx</p>
-                    </div>
-                </li>
-            </ul>
 
-        </section>
-    </div>
-    <div class="container">
-        <section class="references">
-            <h2>课题组-在读硕士生</h2>
-            <ul class="student-info">
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：胡白靖</p>
-                        <p>年龄：25</p>
-                        <p>年级：研三</p>
-                        <p>联系方式：18703486943</p>
-                        <p>研究方向：图表示学习、机器学习</p>
-                    </div>
-                </li>
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：张嘉嵘</p>
-                        <p>年龄：20</p>
-                        <p>年级：研三</p>
-                        <p>联系方式：xxxxxx</p>
-                        <p>研究方向：xxxxxxxxxxx</p>
-                    </div>
-                </li>
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：潘佳怡</p>
-                        <p>年龄：20</p>
-                        <p>年级：研三</p>
-                        <p>联系方式：xxxxxx</p>
-                        <p>研究方向：xxxxxxxxxxx</p>
-                    </div>
-                </li>
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：温江浩</p>
-                        <p>年龄：20</p>
-                        <p>年级：研二</p>
-                        <p>联系方式：xxxxxx</p>
-                        <p>研究方向：xxxxxxxxxxx</p>
-                    </div>
-                </li>
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：张佳鑫</p>
-                        <p>年龄：20</p>
-                        <p>年级：研二</p>
-                        <p>联系方式：xxxxxx</p>
-                        <p>研究方向：xxxxxxxxxxx</p>
-                    </div>
-                </li>
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：程诗颖</p>
-                        <p>年级：研二</p>
-                        <p>联系方式：xxxxxx</p>
-                        <p>研究方向：xxxxxxxxxxx</p>
-                    </div>
-                </li>
-                <li><img src="./student.png" alt="学生头像">
-                    <div class="info">
-                        <p>姓名：张晨超</p>
-                        <p>年龄：20</p>
-                        <p>年级：研一</p>
-                        <p>联系方式：xxxxxx</p>
-                        <p>研究方向：xxxxxxxxxxx</p>
-                    </div>
-                </li>
+        </div>
+        <div class="profile-container">
+            <section class="references">
+                <h2>学术研究</h2>
+                <ul>
+                    <li>[1] Yunxiao Zhao, Zhiqiang Wang*, Xiaoli Li, Jiye Liang, Ru Li*. Reinforced Causal Agent-Guided
+                        Self-explaining Rationalization[C]. The 62nd Annual Meeting of the Association for Computational
+                        Linguistics (ACL), 2024: 510-518</li>
+                    <li>[2] Ru Li, Yunxiao Zhao, Zhiqiang Wang*, Xuefeng Su, Shaoru Guo, Yong Guan, Xiaoqi Han, Hongyan
+                        Zhao. A Comprehensive Overview of CFN From a Commonsense Perspective[J]. Machine Intelligence
+                        Research, 2024, 21(2): 239-256</li>
+                    <li>[3] Liangliang Wen, Jiye Liang*, Kaixuan Yao and Zhiqiang Wang. Black-Box Adversarial Attack on
+                        Graph Neural Networks With Node Voting Mechanism[J]. IEEE Transactions on Knowledge and Data
+                        Engineering, 2024, DOI: 10.1109/TKDE.2024.3380750</li>
+                    <li>[4] Zhihao Guo, Feng Wang*, Kaixuan Yao, Jiye Liang and Zhiqiang Wang. Multi-scale variational
+                        graph
+                        autoencoder for link prediction[C]. The 15th ACM International Conference on Web Search and Data
+                        Mining (WSDM), 2022: 334-342</li>
+                    <li>[5] Zhiqiang Wang, Jiye Liang, Ru Li, Yuhua Qian. An approach to cold-start link prediction:
+                        Establishing connections between non-topological and topological information[J]. IEEE
+                        Transactions
+                        on Knowledge and Data Engineering, 2016, 28(11): 2857-2870</li>
+                    <li>[6] Ru Li*, Juan Wu, Zhiqiang Wang, Qinghua Chai. Implicit role linking on chinese discourse:
+                        Exploiting explicit roles and frame-to-frame relations[C]. Proceedings of the 53rd Annual
+                        Meeting of
+                        the Association for Computational Linguistics (ACL), 2015: 1263-1271</li>
+                    <li>[7] Kaihan Zhang, Zhiqiang Wang*, Jiye Liang, Xingwang Zhao. A bayesian matrix factorization
+                        model
+                        for dynamic user embedding in recommender system[J]. Frontiers of Computer Science, 2022, 16(5):
+                        165346</li>
+                    <li>[8] Zhiqiang Wang, Jiye Liang*, Ru Li. A fusion probability matrix factorization framework for
+                        link
+                        prediction, Knowledge-Based Systems[J]. 2018, 159: 72-85</li>
+                    <li>[9] Zhiqiang Wang, Jiye Liang*, Ru Li. Exploiting user-to-user topic inclusion degree for link
+                        prediction in social-information networks[J]. Expert Systems with Applications, 2018, 108:
+                        143-158
+                    </li>
+                    <li style="font-family: '微软雅黑'; font-size: 17px;">[10] 王智强, 梁吉业*, 李茹, 基于信息融合的概率矩阵分解链路预测方法[J].
+                        计算机研究与发展, 2019, 56(2):
+                        306-318</li>
+                    <li style="font-family: '微软雅黑';font-size: 17px;">[11] 王智强, 李茹*, 梁吉业, 张旭华, 武娟, 苏娜,
+                        基于汉语篇章框架语义分析的阅读理解问答研究[J]. 计算机学报,
+                        2016, 39(4): 795-807</li>
+                </ul>
+            </section>
+        </div>
+        <div class="profile-container">
+            <section class="references">
+                <h2>科研项目</h2>
+                <ul>
+                    <li>(1) 国家自然科学基金委员会, 面上项目, 62272285, 动态网络表示学习与建模方法研究, 2023-01-01 至 2026-12-31, 主持</li>
+                    <li>(2) 国家自然科学基金委员会, 青年科学基金项目, 61906111, 社交网络的可解释性链接预测模型与方法研究, 2020-01-01 至 2022-12-31, 主持</li>
+                    <li>(3) 国家科技部, 科技创新2030-“新一代人工智能”重大项目, 2020AAA0106100, 认知计算基础理论与方法研究, 2020-11 至 2024-10, 参与</li>
+                    <li>(4) 国家自然科学基金委员会, 联合基金项目, U21A20473, 网络大数据分析挖掘的理论与方法, 2022-01-01 至 2025-12-31, 参与</li>
+                    <li>(5) 山西省科技厅, 山西省重点研发计划项目, 201903D121162, 基于多源异构大数据的科技服务推荐平台, 2019-12 至 2021-12, 参与</li>
+                    <li>(6) 国家自然科学基金委员会, 面上项目, 62072293, 可解释性多视图聚类方法研究, 2021-01-01 至 2024-12-31, 参与</li>
+                    <li>(7) 国家自然科学基金委员会, 青年科学基金项目, 61807022, 函数型数据的特征重建与分类算法研究, 2019-01-01 至 2021-12-31, 参与</li>
+                    <li>(8) 国家自然科学基金委员会, 青年科学基金项目, 61806117, 基于事件的图文数据阅读理解关键技术研究, 2019-01-01 至 2021-12-31, 参与</li>
+                    <li>(9) 国家自然科学基金委员会, 面上项目, 61876103, 基于多粒度的半监督学习方法, 2019-01-01 至 2022-12-31, 参与</li>
+                    <li>(10) 国家自然科学基金委员会, 面上项目, 61772323, 面向高维数据的粒计算理论与方法, 2018-01-01 至 2021-12-31, 参与</li>
+                    <li>(11) 国家自然科学基金委员会, 面上项目, 61772324, 面向汉语篇章语义分析的框架推理技术研究, 2018-01-01 至 2021-12-31, 参与</li>
+                    <li>(12) 国家自然科学基金委员会, 青年科学基金项目, 61602288, 基于稀疏理论和相关滤波的鲁棒目标检测和跟踪算法及应用研究, 2017-01-01 至 2019-12-31, 参与
+                    </li>
+                    <li>(13) 山西省教育厅，山西省高等学校科技创新项目, 2019L0023, 多粒度视角下的可解释性推荐方法研究, 2020-01-01 至 2021-12-31, 主持</li>
+                </ul>
+            </section>
+        </div>
+        <div class="profile-container">
+            <section class="references">
+                <h2>发明专利</h2>
+                <ul>
+                    <li>[1] 王智强, 梁吉业, 梁建青. 一种基于概率产生式的社交网络时序链接预测方法及装置, 中国, ZL202010102869.2</li>
+                    <li>[2] 梁吉业, 李琦, 王智强. 一种基于PU学习和随机游走的链接预测方法及装置, 中国, ZL202010087931.5</li>
+                    <li>[3] 梁吉业, 张凯涵, 王智强. 一种基于图神经网络的序列推荐系统及推荐方法, 中国, ZL202011549710.1</li>
+                    <li>[4] 梁吉业, 李琳, 王智强, 梁建青. 一种基于矩阵分解的事后可解释性推荐方法及装置, 中国, ZL202010034176.4</li>
+                    <li>[5] 梁吉业, 刘雨璐, 王智强, 张凯涵. 基于用户兴趣漂移的推荐方法及推荐装置, 中国, ZL202010076472.0</li>
+                </ul>
+            </section>
+        </div>
+        <div class="profile-container">
+            <section class="references">
+                <h2>学术获奖</h2>
+                <ul>
+                    <li>(1) 王智强(3/4); 图数据分析挖掘基础理论与方法, 山西省科学技术奖励委员会, 山西省自然科学一等奖, 2023</li>
+                    <li>(2) 王智强(2/2); 图结构驱动的企业科技信息服务, “华为杯”第五届中国研究生人工智能创新大赛一等奖, 中国学位与研究生教育学会, 优秀指导教师, 2023</li>
+                    <li>(3) 王智强(1/1); 社交网络链接预测方法研究, 中国中文信息学会, 中国中文信息学会优秀博士学位论文奖, 2019</li>
+                    <li>(4) 王智强(1/1); 社交网络链接预测方法研究, 山西省人民政府学位委员会, 山西省优秀博士论文奖, 2019</li>
+                    <li>(5) 王智强(1/1); 社交网络链接预测方法研究, ACM中国, ACM太原优秀博士学位论文奖, 2018</li>
+                </ul>
+            </section>
+        </div>
+        <div class="profile-container">
+            <section class="references">
+                <h2>课题组-在读博士生</h2>
+                <ul class="student-info">
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名：王晓熠</p>
+                            <p>年龄：24</p>
+                            <p>年级：博一</p>
+                            <p>联系方式：13403666817</p>
+                            <p>研究方向：图表示学习、机器学习</p>
+                        </div>
+                    </li>
+                </ul>
 
-            </ul>
+            </section>
+        </div>
+        <div class="profile-container">
+            <section class="references">
+                <h2>课题组-在读硕士生</h2>
+                <ul class="student-info">
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名：胡白靖</p>
+                            <p>年龄：25</p>
+                            <p>年级：研三</p>
+                            <p>联系方式：18703486943</p>
+                            <p>研究方向：图表示学习、机器学习</p>
+                        </div>
+                    </li>
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名：张嘉嵘</p>
+                            <p>年龄：20</p>
+                            <p>年级：研三</p>
+                            <p>联系方式：xxxxxx</p>
+                            <p>研究方向：xxxxxxxxxxx</p>
+                        </div>
+                    </li>
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名：潘佳怡</p>
+                            <p>年龄：25</p>
+                            <p>年级：研三</p>
+                            <p>联系方式：15735214644</p>
+                            <p>研究方向：序列推荐、数据挖掘</p>
+                        </div>
+                    </li>
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名: 温江浩</p>
+                            <p>年龄: 23</p>
+                            <p>年级: 研二</p>
+                            <p>联系方式: 15536987822</p>
+                            <p>研究方向:图表示学习、机器学习</p>
+                        </div>
+                    </li>
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名：张佳鑫</p>
+                            <p>年龄：21</p>
+                            <p>年级：研二</p>
+                            <p>联系方式：15137324683</p>
+                            <p>研究方向：图神经网络、机器学习</p>
+                        </div>
+                    </li>
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名：程诗颖</p>
+                            <p>年级：研二</p>
+                            <p>年龄：23</p>
+                            <p>联系方式：18536612023</p>
+                            <p>研究方向：图神经网络的可解释性</p>
+                        </div>
+                    </li>
+                    <li><img src="C:\Users\迷茫的绿色黄焖鸡\Desktop\code\student.png" alt="学生头像">
+                        <div class="info">
+                            <p>姓名：张晨超</p>
+                            <p>年龄：20</p>
+                            <p>年级：研一</p>
+                            <p>联系方式：xxxxxx</p>
+                            <p>研究方向：xxxxxxxxxxx</p>
+                        </div>
+                    </li>
+
+                </ul>
 
 
 
 
-        </section>
-    </div>
+            </section>
+        </div>
 
 
-    <footer>
-        <p>&copy; 山西大学 计算智能与中文信息处理教育部重点实验室 王智强 课题组</p>
-    </footer>
+        <footer>
+            <p>&copy; 山西大学 计算智能与中文信息处理教育部重点实验室 王智强 课题组</p>
+        </footer>
 </body>
 
 </html>
