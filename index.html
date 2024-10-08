@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>山西大学 计算智能与中文信息实验室</title>
+    <title
+        data-en="Key Laboratory of Computational intelligence and Chinese Information Processing of Ministry of Education·ShanXi University"
+        data-zh="山西大学 计算智能与中文信息实验室">山西大学 计算智能与中文信息实验室</title>
     <link rel="shortcut icon" href="./logo.png" type="image/png">
     <style>
         body {
@@ -216,6 +218,12 @@
             display: table;
         }
 
+        /* 其他样式 */
+        .switch-language {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
 
         footer {
             background-color: #706b6bce;
@@ -231,16 +239,22 @@
 </head>
 
 <body>
+    <div class="switch-language">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('zh')">中文</button>
+    </div>
+
     <header>
         <div class="container">
             <div id="branding">
-                <h1><span class="highlight">山西大学</span></h1>
+                <h1><span class="highlight" data-en="ShanXi University" data-zh="山西大学">山西大学</span></h1>
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href="#">课题组介绍</a></li>
-                    <li><a href="#">企业科技信息服务系统</a></li>
-                    <li><a href="#">课题组成果展示</a></li>
+                    <li class="current"><a href="#" data-en="Introduction" data-zh="课题组介绍">课题组介绍</a></li>
+                    <li><a href="#" data-en="Enterprise science and technology information service system"
+                            data-zh="企业科技信息服务系统">企业科技信息服务系统</a></li>
+                    <li><a href="#" data-en="Research Achievements" data-zh="研究成果">课题组成果展示</a></li>
                 </ul>
             </nav>
         </div>
@@ -253,19 +267,26 @@
             </figure>
             <div class="profile-section">
                 <div class="profile-header">
-                    <h2><strong>课题组负责人：</strong>王智强</h2>
+                    <h2><strong data-en="Professor:" data-zh="课题组负责人：">课题组负责人：</strong><span data-en="Zhiqiang Wang"
+                            data-zh="王智强"></span></h2>
                 </div>
-                <p><strong>职称：</strong>副教授</p>
-                <p><strong>研究方向：</strong>数据挖掘与机器学习、社交网络分析、自然语言处理</p>
-                <p><strong>负责人简介：</strong>王智强，山西大学智能信息处理研究所副教授，博士生导师，主要研究方向包括：数据挖掘与机器学习、网络大数据分析、自然语言处理。2018年在山西大学计算机与信息技术学院获得博士学位。近年来，主持国家自然科学基金面上、青年等项目，并作为骨干成员参与科技创新2030—“新一代人工智能”重大项目、国家自然科学基金联合基金重点项目、山西省重点研发计划项目等国家级与省部级项目多项。在IEEE
+                <p><strong data-en="Title:" data-zh="职称">职称：</strong><span data-en="Associate Professor"
+                        data-zh="副教授">副教授</span></p>
+                <p><strong data-en="Research topic:" data-zh="研究方向">研究方向：</strong><span
+                        data-en="Data Mining and Machine Learning, Social Network Analysis, Natural Language Processing"
+                        data-zh="数据挖掘与机器学习、社交网络分析、自然语言处理">数据挖掘与机器学习、社交网络分析、自然语言处理</span></p>
+                <p><strong data-en="Introduction:" data-zh="负责人简介：">负责人简介：</strong><span data-en="Zhiqiang Wang, an associate professor and doctoral supervisor at the Institute of Intelligent Information Processing, Shanxi University, mainly focuses on research directions such as data mining and machine learning, big data analysis of networks, and natural language processing. In 2018, he obtained his Ph.D. from the School of Computer and Information Technology at Shanxi University. In recent years, he has presided over projects such as the National Natural Science Foundation of China's general and youth projects, and has participated as a key member in major projects like Science and Technology Innovation 2030—'New Generation of Artificial Intelligence' key projects of the National Natural Science Foundation of China's joint fund, and key research and development plan projects of Shanxi Province. He has published more than 20 academic papers in important domestic and international academic journals and conferences such as IEEE TKDE, ACL, WSDM, Chinese Science: Information Science, and Journal of Computer Science. He has won the first prize of Shanxi Province Natural Science in 2023, the excellent doctoral dissertation award of the China Society for Computational Linguistics in 2019, and the excellent doctoral dissertation award of Shanxi Province. He serves as an executive member of the Artificial Intelligence and Pattern Recognition Committee of the China Computer Federation, a member of the Information Retrieval Committee of the China Society for Computational Linguistics, and a member of the Youth Working Committee of the China Society for Computational Linguistics. He is a reviewer for international academic conferences such as ACL, KDD, CCDM, EMNLP, COLING, and international journals such as TNNLS, Neural Networks, and Neurocomputing.
+                    " data-zh="王智强，山西大学智能信息处理研究所副教授，博士生导师，主要研究方向包括：数据挖掘与机器学习、网络大数据分析、自然语言处理。2018年在山西大学计算机与信息技术学院获得博士学位。近年来，主持国家自然科学基金面上、青年等项目，并作为骨干成员参与科技创新2030—“新一代人工智能”重大项目、国家自然科学基金联合基金重点项目、山西省重点研发计划项目等国家级与省部级项目多项。在IEEE
                     TKDE、ACL、WSDM、《中国科学：信息科学》、《计算机学报》等国内外重要学术期刊及会议发表学术论文20余篇。获得了2023年度山西省自然科学一等奖、2019年度中国中文信息学会优秀博士学位论文奖、山西省优秀博士学位论文奖。中国计算机学会人工智能与模式识别专委会执行委员、中国中文信息学会信息检索专委会委员、中国中文信息学会青年工作委员会委员。ACL、KDD、CCDM、EMNLP、COLING等国际学术会议和TNNLS、Neural
-                    Networks、Neurocomputing等国际期刊审稿人。</p>
+                    Networks、Neurocomputing等国际期刊审稿人。">王智强，山西大学智能信息处理研究所副教授，博士生导师，主要研究方向包括：数据挖掘与机器学习、网络大数据分析、自然语言处理。2018年在山西大学计算机与信息技术学院获得博士学位。近年来，主持国家自然科学基金面上、青年等项目，并作为骨干成员参与科技创新2030—“新一代人工智能”重大项目、国家自然科学基金联合基金重点项目、山西省重点研发计划项目等国家级与省部级项目多项。在IEEE
+                        TKDE、ACL、WSDM、《中国科学：信息科学》、《计算机学报》等国内外重要学术期刊及会议发表学术论文20余篇。获得了2023年度山西省自然科学一等奖、2019年度中国中文信息学会优秀博士学位论文奖、山西省优秀博士学位论文奖。中国计算机学会人工智能与模式识别专委会执行委员、中国中文信息学会信息检索专委会委员、中国中文信息学会青年工作委员会委员。ACL、KDD、CCDM、EMNLP、COLING等国际学术会议和TNNLS、Neural
+                        Networks、Neurocomputing等国际期刊审稿人。</span></p>
             </div>
 
         </div>
         <div class="profile-container">
             <section class="references">
-                <h2>学术研究</h2>
+                <h2 data-en="Published Papers" data-zh="学术研究">学术研究</h2>
                 <ul>
                     <li>[1] Yunxiao Zhao, Zhiqiang Wang*, Xiaoli Li, Jiye Liang, Ru Li*. Reinforced Causal Agent-Guided
                         Self-explaining Rationalization[C]. The 62nd Annual Meeting of the Association for Computational
@@ -310,7 +331,7 @@
         </div>
         <div class="profile-container">
             <section class="references">
-                <h2>科研项目</h2>
+                <h2 data-en="Research Projects" data-zh="科研项目">科研项目</h2>
                 <ul>
                     <li>(1) 国家自然科学基金委员会, 面上项目, 62272285, 动态网络表示学习与建模方法研究, 2023-01-01 至 2026-12-31, 主持</li>
                     <li>(2) 国家自然科学基金委员会, 青年科学基金项目, 61906111, 社交网络的可解释性链接预测模型与方法研究, 2020-01-01 至 2022-12-31, 主持</li>
@@ -331,7 +352,7 @@
         </div>
         <div class="profile-container">
             <section class="references">
-                <h2>发明专利</h2>
+                <h2 data-en="Patent" data-zh="发明专利">发明专利</h2>
                 <ul>
                     <li>[1] 王智强, 梁吉业, 梁建青. 一种基于概率产生式的社交网络时序链接预测方法及装置, 中国, ZL202010102869.2</li>
                     <li>[2] 梁吉业, 李琦, 王智强. 一种基于PU学习和随机游走的链接预测方法及装置, 中国, ZL202010087931.5</li>
@@ -343,7 +364,7 @@
         </div>
         <div class="profile-container">
             <section class="references">
-                <h2>学术获奖</h2>
+                <h2 data-en="Awards" data-zh="学术获奖">学术获奖</h2>
                 <ul>
                     <li>(1) 王智强(3/4); 图数据分析挖掘基础理论与方法, 山西省科学技术奖励委员会, 山西省自然科学一等奖, 2023</li>
                     <li>(2) 王智强(2/2); 图结构驱动的企业科技信息服务, “华为杯”第五届中国研究生人工智能创新大赛一等奖, 中国学位与研究生教育学会, 优秀指导教师, 2023</li>
@@ -355,15 +376,16 @@
         </div>
         <div class="profile-container">
             <section class="references">
-                <h2>课题组-在读博士生</h2>
+                <h2 data-en="PhD students" data-zh="课题组-在读博士生">课题组-在读博士生</h2>
                 <ul class="student-info">
                     <li><img src="./student.png" alt="学生头像">
                         <div class="info">
-                            <p>姓名：王晓熠</p>
-                            <p>年龄：24</p>
-                            <p>年级：博一</p>
-                            <p>联系方式：13403666817</p>
-                            <p>研究方向：图表示学习、机器学习</p>
+                            <p data-en="name：Xiaoyi Wang" data-zh="姓名：王晓熠">姓名：王晓熠</p>
+                            <p data-en="age：24" data-zh="年龄：24">年龄：24</p>
+                            <p data-en="year：first-year PhD student" data-zh="年级：博士一年级">年级：博一</p>
+                            <p data-en="phone：13403666817" data-zh="联系方式：13403666817">联系方式：13403666817</p>
+                            <p data-en="reasearch topic：Graph Representation Learning、Machine Learning"
+                                data-zh="研究方向：图表示学习、机器学习">研究方向：图表示学习、机器学习</p>
                         </div>
                     </li>
                 </ul>
@@ -372,69 +394,83 @@
         </div>
         <div class="profile-container">
             <section class="references">
-                <h2>课题组-在读硕士生</h2>
+                <h2 data-en="Graduate student" data-zh="课题组-在读硕士生">课题组-在读硕士生</h2>
                 <ul class="student-info">
                     <li><img src="./student.png" alt="学生头像">
                         <div class="info">
-                            <p>姓名：胡白靖</p>
-                            <p>年龄：25</p>
-                            <p>年级：研三</p>
-                            <p>联系方式：18703486943</p>
-                            <p>研究方向：图表示学习、机器学习</p>
+                            <p data-en="name：Baijing Hu" data-zh="姓名：胡白靖">姓名：胡白靖</p>
+                            <p data-en="age：25" data-zh="年龄：25">年龄：25</p>
+                            <p data-en="year：third year graduate student" data-zh="年级：研究生三年级">年级：研究生三年级</p>
+                            <p data-en="phone：18703486943" data-zh="联系方式：18703486943">联系方式：18703486943</p>
+                            <p data-en="reasearch topic：Graph Representation Learning、Machine Learning"
+                                data-zh="研究方向：图表示学习、机器学习">研究方向：图表示学习、机器学习</p>
+                        </div>
+
+                    </li>
+                    <li><img src="./student.png" alt="学生头像">
+                        <div class="info">
+                            <p data-en="name：Jiarong Zhang" data-zh="姓名：张嘉嵘">姓名：张嘉嵘</p>
+                            <p data-en="age：25" data-zh="年龄：25">年龄：25</p>
+                            <p data-en="year：third year graduate student" data-zh="年级：研究生三年级">年级：研究生三年级</p>
+                            <p data-en="phone：XXXXX" data-zh="联系方式：XXXXX">联系方式：XXXXX</p>
+                            <p data-en="reasearch topic：Graph Representation Learning、Machine Learning"
+                                data-zh="研究方向：图表示学习、机器学习">研究方向：图表示学习、机器学习</p>
                         </div>
                     </li>
                     <li><img src="./student.png" alt="学生头像">
                         <div class="info">
-                            <p>姓名：张嘉嵘</p>
-                            <p>年龄：20</p>
-                            <p>年级：研三</p>
-                            <p>联系方式：xxxxxx</p>
-                            <p>研究方向：xxxxxxxxxxx</p>
+                            <p data-en="name：Jiayi Pan" data-zh="姓名：潘佳怡">姓名：潘佳怡</p>
+                            <p data-en="age：25" data-zh="年龄：25">年龄：25</p>
+                            <p data-en="year：third year graduate student" data-zh="年级：研究生三年级">年级：研究生三年级</p>
+                            <p data-en="phone：15735214644" data-zh="联系方式：15735214644">联系方式：15735214644</p>
+                            <p data-en="reasearch topic：Sequence recommendation、Data Mining" data-zh="研究方向：序列推荐、数据挖掘">
+                            </p>
                         </div>
                     </li>
                     <li><img src="./student.png" alt="学生头像">
                         <div class="info">
-                            <p>姓名：潘佳怡</p>
-                            <p>年龄：25</p>
-                            <p>年级：研三</p>
-                            <p>联系方式：15735214644</p>
-                            <p>研究方向：序列推荐、数据挖掘</p>
+
+                            <p data-en="name：Jianghao Wen" data-zh="姓名：温江浩">姓名：温江浩</p>
+                            <p data-en="age：23" data-zh="年龄：23">年龄：23</p>
+                            <p data-en="year：second year graduate student" data-zh="年级：研究生二年级">年级：研究生二年级</p>
+                            <p data-en="phone：15536987822" data-zh="联系方式：15536987822">联系方式：15536987822</p>
+                            <p data-en="reasearch topic：Graph Representation Learning、Machine Learning"
+                                data-zh="研究方向：图表示学习、机器学习">研究方向：图表示学习、机器学习</p>
+
                         </div>
                     </li>
                     <li><img src="./student.png" alt="学生头像">
                         <div class="info">
-                            <p>姓名: 温江浩</p>
-                            <p>年龄: 23</p>
-                            <p>年级: 研二</p>
-                            <p>联系方式: 15536987822</p>
-                            <p>研究方向:图表示学习、机器学习</p>
+                            <p data-en="name：Jiaxin Zhang" data-zh="姓名：张佳鑫">姓名：张佳鑫</p>
+                            <p data-en="age：21" data-zh="年龄：21">年龄：21</p>
+                            <p data-en="year：second year graduate student" data-zh="年级：研究生二年级">年级：研究生二年级</p>
+                            <p data-en="phone：15137324683" data-zh="联系方式：15137324683">联系方式：15137324683</p>
+                            <p data-en="reasearch topic：GNN、Machine Learning" data-zh="研究方向：图神经网络、机器学习">研究方向：图神经网络、机器学习
+                            </p>
                         </div>
                     </li>
                     <li><img src="./student.png" alt="学生头像">
                         <div class="info">
-                            <p>姓名：张佳鑫</p>
-                            <p>年龄：21</p>
-                            <p>年级：研二</p>
-                            <p>联系方式：15137324683</p>
-                            <p>研究方向：图神经网络、机器学习</p>
+                            <p data-en="name：Shiying Cheng" data-zh="姓名：程诗颖">姓名：程诗颖</p>
+                            <p data-en="age：23" data-zh="年龄：23">年龄：23</p>
+                            <p data-en="year：second year graduate student" data-zh="年级：研究生二年级">年级：研究生二年级</p>
+                            <p data-en="phone：18536612023" data-zh="联系方式：18536612023">联系方式：18536612023</p>
+                            <p data-en="reasearch topic：Explainability in Graph Neural Networks"
+                                data-zh="研究方向：图神经网络的可解释性">研究方向：图神经网络的可解释性
+                            </p>
+
                         </div>
                     </li>
                     <li><img src="./student.png" alt="学生头像">
                         <div class="info">
-                            <p>姓名：程诗颖</p>
-                            <p>年级：研二</p>
-                            <p>年龄：23</p>
-                            <p>联系方式：18536612023</p>
-                            <p>研究方向：图神经网络的可解释性</p>
-                        </div>
-                    </li>
-                    <li><img src="./student.png" alt="学生头像">
-                        <div class="info">
-                            <p>姓名：张晨超</p>
-                            <p>年龄：20</p>
-                            <p>年级：研一</p>
-                            <p>联系方式：xxxxxx</p>
-                            <p>研究方向：xxxxxxxxxxx</p>
+                            <p data-en="name：Chenchao Zhang" data-zh="姓名：张晨超">姓名：张晨超</p>
+                            <p data-en="age：23" data-zh="年龄：23">年龄：23</p>
+                            <p data-en="year：first year graduate student" data-zh="年级：研究生一年级">年级：研究生一年级</p>
+                            <p data-en="phone：XXXXX" data-zh="联系方式：XXXXX">联系方式：XXXXX</p>
+                            <p data-en="reasearch topic：Explainability in Graph Neural Networks"
+                                data-zh="研究方向：图神经网络的可解释性">研究方向：图神经网络的可解释性
+                            </p>
+
                         </div>
                     </li>
 
@@ -448,8 +484,30 @@
 
 
         <footer>
-            <p>&copy; 山西大学 计算智能与中文信息处理教育部重点实验室 王智强 课题组</p>
+            <p data-en=" Zhiqiang Wang·Key Laboratory of Computational intelligence and Chinese Information Processing of Ministry of Education·ShanXi University "
+                data-zh=" 山西大学 计算智能与中文信息处理教育部重点实验室 王智强 课题组">&copy; 山西大学 计算智能与中文信息处理教育部重点实验室 王智强 课题组</p>
         </footer>
 </body>
+
+
+<script>
+    function switchLanguage(lang) {
+        document.querySelectorAll('[data-en], [data-zh]').forEach(function (element) {
+            var textEn = element.getAttribute('data-en');
+            var textZh = element.getAttribute('data-zh');
+            if (lang === 'en') {
+                element.textContent = textEn ? textEn : textZh;
+            } else {
+                element.textContent = textZh ? textZh : textEn;
+            }
+        });
+        document.querySelector('html').setAttribute('lang', lang);
+    }
+
+    // 默认语言为中文
+    document.addEventListener('DOMContentLoaded', function () {
+        switchLanguage('zh');
+    });
+</script>
 
 </html>
