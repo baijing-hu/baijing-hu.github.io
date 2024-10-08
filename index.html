@@ -1,129 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人信息展示</title>
+    <title>个人信息页面</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
+            margin: 20px;
         }
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: auto;
-            overflow: hidden;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
         }
-        header {
-            background: #50b3a2;
-            color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ffffff;
-            font-weight: bold;
-        }
-        .showcase {
-            min-height: 400px;
-            background: url('your-image.jpg') no-repeat 0 -100px;
+        .photo {
             text-align: center;
-            color: #ffffff;
+            margin-bottom: 20px;
         }
-        .showcase h1 {
-            padding-top: 100px;
-            font-size: 55px;
+        .photo img {
+            max-width: 150px;
+            border-radius: 50%;
         }
-        .showcase p {
-            font-size: 20px;
+        h2 {
+            color: #333;
         }
-        .info {
-            padding: 15px;
-            color: #ffffff;
-            background: #50b3a2;
-        }
-        .info h2, .info p {
-            padding-bottom: 15px;
-        }
-        .info .personal-info {
-            background: #e8491d;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .info .personal-info p {
-            padding-bottom: 0;
+        .section {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">个人信息</span>展示</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">首页</a></li>
-                    <li><a href="about.html">关于我</a></li>
-                    <li><a href="contact.html">联系方式</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <div class="photo">
+            <img src="你的照片链接" alt="个人照片">
         </div>
-    </header>
-
-    <section class="showcase">
-        <div class="container">
-            <h1>欢迎来到我的个人网页</h1>
-            <p>这里是我的个人信息展示</p>
-        </div>
-    </section>
-
-    <section class="info">
-        <div class="container">
+        <div class="section">
             <h2>个人信息</h2>
-            <div class="personal-info">
-                <p><strong>姓名：</strong>张三</p>
-                <p><strong>年龄：</strong>30</p>
-                <p><strong>职业：</strong>软件工程师</p>
-                <p><strong>教育背景：</strong>计算机科学与技术学士</p>
-                <p><strong>兴趣爱好：</strong>阅读、旅行、编程</p>
-            </div>
+            <p>姓名: 张三</p>
+            <p>出生日期: 1990年1月1日</p>
+            <p>联系方式: zhangsan@example.com</p>
         </div>
-    </section>
-
-    <footer>
-        <p>版权所有 &copy; 2024 张三</p>
-    </footer>
+        <div class="section">
+            <h2>硕士情况</h2>
+            <p>学校: 北京大学</p>
+            <p>专业: 计算机科学</p>
+            <p>毕业年份: 2015年</p>
+            <p>硕士论文: <a href="硕士论文链接">《基于机器学习的图像识别研究》</a></p>
+        </div>
+        <div class="section">
+            <h2>博士情况</h2>
+            <p>学校: 清华大学</p>
+            <p>专业: 人工智能</p>
+            <p>毕业年份: 2020年</p>
+            <p>博士论文: <a href="博士论文链接">《深度学习在自然语言处理中的应用》</a></p>
+        </div>
+        <div class="section">
+            <h2>研究成果</h2>
+            <ul>
+                <li>论文1: <a href="论文1链接">《深度学习在图像处理中的应用》</a></li>
+                <li>论文2: <a href="论文2链接">《自然语言处理中的新方法》</a></li>
+                <li>项目1: <a href="项目1链接">《智能语音助手开发》</a></li>
+                <li>项目2: <a href="项目2链接">《自动驾驶系统研究》</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
+
